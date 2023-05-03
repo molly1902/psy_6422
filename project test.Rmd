@@ -1,0 +1,68 @@
+---
+title: "Markdown"
+author: "220250711"
+date: "2023-02-24"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+## Data Origins
+The data came from open source repository published by the following study: ref
+It was downloaded in csv format
+Variable names are responses to nuisance questions, such as ‘what is your favourite football player’, because the original study was just interested in age of participants (‘aged’ column) and what song they listened to (‘potato’, when64, or ‘kalimba’
+
+``` {r first few lines of dataset}
+2+2
+```
+
+## Research Questions
+The aim of the study from which the data was taken was to express that psychology papers contain a lot of false positive results, where analyses are statistically significant but have no real effect. They wanted to prove that by strategically analysing data they could create significance from variables that definitely have no real interaction- that song listened to by participants significantly affected their age, which is obviously impossible. My visualisation aims to address the question of whether song listened to affects participant age or participant’s father’s age- in other words, whether choice of covariate in an ancova model has an effect on the significance.
+
+## Data Preparation
+The first step was to remove all the nuisance variables, leaving only the necessary ones for analysis- age, dad age, potato, kalimba, when64. The song variables were coded as 1 or 0 depending on if they listened to that song or not. These variables were then recoded to only keep rows which were listened to (1) for each song. Ultimately, this left a dataframe with 3 columns; ppt age, dad age, song listened to
+show the first few rows of the processed data, if possible
+showing the code which does this were relevant
+
+## Visualisation
+graph or graphs
+table?
+documentation explaining any motivation (although good graph labelling is better than explanation in the accompanying text)
+code for producing them
+put echo=true to not show the code
+
+```{r pressure, echo = TRUE}
+2+2
+```
+
+## Summary
+Brief thoughts on what you have learnt, what you might do next if you had more time / more data
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# You can embed an R code chunk like this:
+
+```{r cars}
+2+2
+```
+
+## my notes
+Bold: **bold**   
+Italics: *italics* 
+two spaces at the end of a line starts a new paragraph  
+Insert code:
+`r 2 +2`
+you can add chunks by surrounding with ``` and putting {r} at the start eg:  
+```{r eg chunk}
+2 + 2
+```
+to change how this is displayed put things in the {}  
+rmarkdown::render("<file path>") 
+## my project
+
+```{r chunk not shown, echo = FALSE}
+2 + 2
+```
+  
