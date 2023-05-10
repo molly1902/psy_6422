@@ -1,14 +1,14 @@
 # Call all libraries
-library(tidyverse)    #for ggplot
-library(readxl)       #for read_excel
-library(dplyr)        #for
-library(car)          #for
-library(multcomp)     #for
-library(readr)        #for
-library(ggplot2)      #for
-library(here)         #for
-library(patchwork)    #for
-library(ggpubr)       #for
+library(tidyverse)     
+library(readxl)        
+library(dplyr)        
+library(car)          
+library(multcomp)     
+library(readr)        
+library(ggplot2)      
+library(here)         
+library(patchwork)    
+library(ggpubr)       
 
 ## Data retrieval ##
 
