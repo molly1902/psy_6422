@@ -45,9 +45,9 @@ s2 <- read_excel("s2.xlsx")
 
 
 ## Data Origins
-The data came from open source repository published by the following study: Simmons, J P, Nelson, L D and Simonsohn, U (2011). False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant. *Psychological Science 22*(11): 1359–1366, DOI: https://doi.org/10.1177/0956797611417632
+The data came from open source repository published by the following study: Simmons, J P, Nelson, L D and Simonsohn, U (2011). False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant. *Psychological Science 22*(11): 1359–1366, DOI: https://doi.org/10.1177/0956797611417632.  
 Variable names are responses to nuisance questions, such as ‘what is your favourite football player’, because the original study was just interested in age of participants (‘?’ column) and what song they listened to (‘potato’, when64, or ‘kalimba’). 
-The data from the article downloads in .txt form, which i copied and pasted into an Excel spreadsheet as it appeared neater in R. I then uploaded the data in Excel form to GitHub, which is where the data is pulled from by R.
+The data from the article downloads in .txt form, which I copied and pasted into an Excel spreadsheet as it appeared neater in R. I then uploaded the data in Excel form to GitHub, which is where the data is pulled from by R.
 Here are the first few lines of data before processing:
 
 ```{r echo=TRUE}
@@ -305,7 +305,7 @@ ggsave(filename = file.path("graphs","ANCOVAs.png"),
        width = 13, height = 15, units = "cm")
 ```
 
-## Visualisation: Difference in age, by song listened to or covariate?
+## Visualisation: Difference in age, because of song listened to, or covariate?
 
 ``` {r echo=FALSE}
 plot1
@@ -313,5 +313,5 @@ plot1
 
 
 ## Summary
-This vizualisation shows that false significance can be created from nonesense variables through careful manipulation of statistical analyses. With more time, the study could have been stretched to include more data, such as from study 1 dataset of the original paper. It is limited in that it only shows data from 42 participants, with each group having an unequal number of participants, but this information is not displayed on the graph. This kind of data being shown would have enriched the vizualisation by further expressing how statistical analyses can hide the meaningful origins of the data.Future research could investigate the effect of unequal group size on post hoc comparisons in ANCOVAs.
+This vizualisation shows that false significance can be created from nonesense variables through careful manipulation of statistical analyses. With more time, the study could have been stretched to include more data, such as from study 1 dataset of the original paper. It is limited in that it only shows data from 42 participants, with each group having an unequal number of participants, but this information is not displayed on the graph. This kind of data being shown would have enriched the vizualisation by further expressing how statistical analyses can hide the meaningful origins of the data. Future research could investigate the effect of unequal group size on post hoc comparisons in ANCOVAs.
 
