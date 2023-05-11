@@ -243,13 +243,11 @@ df2 <- data.frame(songsdiffs,Who,songminussong,p_values)
 
 # Bar chart with song difference pairs on the x axis,
 # mean age difference on the y axis, grouped by who's mean age is shown-
-# participant or father, with corresponding p values on the bars
-# Display and save the plot
+# participant or father
 plot1 <- ggplot(df2, aes(x = songminussong, y = songsdiffs, color = Who)) +
   geom_bar(stat = "identity", color = 'black') +
-  geom_text(aes(label = paste("p =", p_values)), size = 4, 
-            position = position_dodge(width = 0), vjust = -0.6, hjust = 0.5) +
-  labs(x = "Post Hoc analysis of songs", y = "Difference in age in years",
+  geom_text(aes(label = "" ))+
+labs(x = "Post Hoc analysis of songs", y = "Difference in age in years",
        title = "ANCOVA results of participant or father age by song listened to",
        subtitle = "Covariate was father or participant age",
        caption = "Source: Simmons et al., (2011)") +
@@ -257,6 +255,12 @@ plot1 <- ggplot(df2, aes(x = songminussong, y = songsdiffs, color = Who)) +
   theme(panel.background = element_rect(fill = 'white'),
         axis.line = element_line(color = "grey"))+
   scale_y_continuous(breaks = seq(0,6,1))
-plot1
-ggsave(filename = file.path("graphs","ANCOVAs.png"), 
+
+# Add the p values to the plot for participant and dad
+# Save the plot
+plot1+ annotate("text", x = c(1, 2, 3), y = c(6.1, 3.4, 3.5), 
+                label = c("p = 0.011*", "p = 0.248", "p = 0.317"), color= 'firebrick2')+
+      annotate("text", x = c(1, 2, 3), y = c(0.9, 1.2, 0.5), 
+           label = c("p = 0.118", "p = 0.254", "p = 0.867"), color= 'cyan2')
+ggsave(filename = file.path("graphs","plot220250711.png"), 
        width = 13, height = 15, units = "cm")
