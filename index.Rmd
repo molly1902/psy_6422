@@ -3,8 +3,8 @@ title: "Index"
 author: '220250711'
 date: "2023-05-16"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
