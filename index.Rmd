@@ -1,29 +1,32 @@
 ---
 title: "Index"
-author: "Molly Hall"
+author: '220250711'
 date: "2023-05-16"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ## Research Question
 The aim of the study from which the data was taken (Simmons et al., 2011) was to express that psychology papers contain a lot of false positive results, where analyses are statistically significant but have no real effect. They wanted to prove that by strategically analysing data they could create significance from variables that definitely have no real interaction- that song listened to by participants significantly affected their age, which is obviously impossible. My visualisation aims to address the question of whether choice of covariate in an ancova model has an effect on the significance, by analysing whether song listened to affects participant age or participant’s father’s age.
 
 ``` {r messages= FALSE, echo=FALSE, include =FALSE}
 # Call all libraries
-library(tidyverse)    #for ggplot
-library(readxl)       #for read_excel
-library(dplyr)        #for
-library(car)          #for
-library(multcomp)     #for
-library(readr)        #for
-library(ggplot2)      #for
-library(here)         #for
-library(patchwork)    #for
-library(ggpubr)       #for
+library(tidyverse)    
+library(readxl)       
+library(dplyr)        
+library(car)          
+library(multcomp)   
+library(readr)      
+library(ggplot2)    
+library(here)         
+library(patchwork)  
+library(ggpubr)     
 
 ## Data retrieval ##
 
@@ -310,4 +313,5 @@ plot1
 
 
 ## Summary
-Brief thoughts on what you have learnt, what you might do next if you had more time / more data
+This vizualisation shows that false significance can be created from nonesense variables through careful manipulation of statistical analyses. With more time, the study could have been stretched to include more data, such as from study 1 dataset of the original paper. It is limited in that it only shows data from 42 participants, with each group having an unequal number of participants, but this information is not displayed on the graph. This kind of data being shown would have enriched the vizualisation by further expressing how statistical analyses can hide the meaningful origins of the data.Future research could investigate the effect of unequal group size on post hoc comparisons in ANCOVAs.
+
