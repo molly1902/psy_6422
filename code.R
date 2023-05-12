@@ -263,4 +263,4 @@ plot1+ annotate("text", x = c(1, 2, 3), y = c(6.1, 3.4, 3.5),
       annotate("text", x = c(1, 2, 3), y = c(0.9, 1.2, 0.5), 
            label = c("p = 0.118", "p = 0.254", "p = 0.867"), color= 'cyan2')
 ggsave(filename = file.path("graphs","plot220250711.png"), 
-       width = 13, height = 15, units = "cm")
+       width = 15, height = 15, units = "cm")
